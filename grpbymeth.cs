@@ -587,7 +587,8 @@ namespace Linqgroupbymethod
             }
             else
             {
-                Console.WriteLine("No sequence found The StudentIDs in both tables are different");
+
+                Console.WriteLine("No sequence foundssss The StudentIDs in both tables are different");
             }
         }
         //this method returns the element at a specified index in a sequence. //
@@ -692,7 +693,7 @@ public static void Lastmethod()
             using var context = new StudentDbcontext();
             {
                 var student = context.stuinformation
-                    .ToList()
+                    .OrderBy(s => s.FirstName)
                     .Last();
 
                 Console.WriteLine($"StudentID:{student:StudentID},Name:{student.FirstName},Age:{student.Age},Address:{student.Address}");
